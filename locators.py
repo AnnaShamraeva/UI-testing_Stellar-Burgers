@@ -14,13 +14,14 @@ class Locators:
     INPUT_PASSWORD = By.XPATH, '//label[text()="Пароль"]/following-sibling::input' # На  https://stellarburgers.education-services.ru/login поле ввода пароля
     LOGIN_BUTTON_LOGIN_PAGE = By.XPATH, '//button[text()="Войти"]' # На  https://stellarburgers.education-services.ru/login кнопка Войти
     LOGIN_BUTTON_REG_PAGE = By.XPATH, '//a[text()="Войти"]' # Кнопка "Войти" на странице регистрации
-    LOGIN_BUTTON_FORGOT_PASSWORD_PAGE = (By.XPATH, "//main//div//div//p/a[normalize-space(.)='Войти']") # Кнопка "Войти" на странице восстановления пароля
+    #LOGIN_BUTTON_FORGOT_PASSWORD_PAGE = (By.XPATH, "//main//div//div//p/a[normalize-space(.)='Войти']") # Кнопка "Войти" на странице восстановления пароля
+    LOGIN_BUTTON_FORGOT_PASSWORD_PAGE = (By.XPATH, '//a[text()="Войти"]') # Кнопка "Войти" на странице восстановления пароля
 
     # Заголовки:
     HEADER_LOGIN = (By.XPATH, '//h2[text()="Вход"]') # Заголовок "Вход"
     HEADER_REGISTRATION = (By.XPATH, '//h2[text()="Регистрация"]') # Заголовок "Регистрация"
-    HEADER_WRONG_PASSWORD = (By.XPATH, "/html/body/div/div/main/div/form/fieldset[3]/div/p") # Заголовок "Некорректный пароль" сообщения об ошибке
-    HEADER_USER_ALREDY_EXIST = (By.XPATH, '//h2[text()="Такой пользователь уже существует"]') # Заголовок "Такой пользователь уже существует" сообщения об ошибке
+    #HEADER_WRONG_PASSWORD = (By.XPATH, "/html/body/div/div/main/div/form/fieldset[3]/div/p") # Заголовок "Некорректный пароль" сообщения об ошибке
+    HEADER_WRONG_PASSWORD = (By.XPATH, '//p[text()="Некорректный пароль"]') # Заголовок "Некорректный пароль" сообщения об ошибкеHEADER_USER_ALREDY_EXIST = (By.XPATH, '//h2[text()="Такой пользователь уже существует"]') # Заголовок "Такой пользователь уже существует" сообщения об ошибке
     HEADER_PROFILE = (By.XPATH, '//h2[text()="Профиль"]') # Заголовок "Профиль"
     DO_BURGER= (By.XPATH, '//h1[text()="Соберите бургер"]') # Заголовок "Соберите бургер"
 
