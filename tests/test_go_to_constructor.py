@@ -16,7 +16,6 @@ class TestGoToConstructor:
         driver.find_element(*Locators.ACCOUNT_BUTTON).click() 
         WebDriverWait(driver, 15).until(EC.url_contains(Url.profile_page))
         driver.find_element(*Locators.CONSTRUCTOR_BUTTON).click()
-        #WebDriverWait(driver, 15).until(EC.visibility_of_element_located(Locators.DO_BURGER))
         assert driver.find_element(*Locators.DO_BURGER).is_displayed()
         
 # Переход из личного кабинета в конструктор по клику на логотип Stellar Burgers.
@@ -29,6 +28,5 @@ class TestGoToConstructor:
         driver.find_element(*Locators.ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 15).until(EC.url_contains(Url.profile_page))
         WebDriverWait(driver, 15).until(EC.element_to_be_clickable(Locators.LOGO)).click()
-        #WebDriverWait(driver, 15).until(EC.visibility_of_element_located(Locators.DO_BURGER))
         assert driver.find_element(*Locators.DO_BURGER).is_displayed()
         

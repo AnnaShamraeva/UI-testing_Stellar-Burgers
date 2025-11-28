@@ -16,7 +16,7 @@ class TestSuccessRegistration:
         driver.find_element(*Locators.REG_PASSWORD).send_keys(password)
         driver.find_element(*Locators.REG_BUTTON).click()
         assert WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.HEADER_LOGIN))
-        # driver.find_element(*Locators.HEADER_LOGIN).text == "Вход"
+       
 
 # Регестрация с паролем менее шести символов
     @pytest.mark.parametrize('password', ['1', '123', '12345'])
@@ -30,4 +30,4 @@ class TestSuccessRegistration:
         driver.find_element(*Locators.REG_PASSWORD).send_keys(password)
         driver.find_element(*Locators.REG_BUTTON).click()
         assert WebDriverWait(driver, 10).until(EC.text_to_be_present_in_element(Locators.HEADER_WRONG_PASSWORD, "Некорректный пароль"))
-        # driver.find_element(*Locators.HEADER_WRONG_PASSWORD).text == "Некорректный пароль"
+        
